@@ -9,9 +9,23 @@
 </head>
 
 <body class="bg-gray-50 text-gray-800">
+  <!-- ヘッダー: 左にロゴ、右にメニューとCTA(md以上だけ表示) -->
+  <header class="bg-white border-b border-gray-200">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-blue-600">Tabita</a>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-gray-600 hover:text-gray-900">機能</a>
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900">料金</a>
+        <a href="#faq" class="text-gray-600 hover:text-gray-900">FAQ</a>
+        <a href="#pricing"
+          class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700">無料で始める</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
     <!-- ヒーロー: 背景は画面いっぱい、中身だけ幅を絞って中央へ -->
-    <section class="bg-blue-50 py-20 px-6 text-center">
+    <section class="bg-blue-50 py-20 md:py-28 px-6 text-center">
       <div class="max-w-3xl mx-auto">
         <h1 class="font-bold text-3xl md:text-5xl text-gray-900">毎日のタスクを、もっと軽く</h1>
         <p class="text-gray-600 mt-4">Tabita はチームと個人のタスクを 1 つにまとめる、シンプルなタスク管理ツールです。</p>
@@ -24,26 +38,23 @@
     </section>
 
     <!-- 機能: スマホは1列、md以上で3列 -->
-    <section class="py-16 px-6">
+    <section id="features" class="py-12 md:py-16 px-6">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900">主な機能</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-          <!-- カード1 -->
           <div class="bg-white rounded-xl shadow-md p-6">
             <div class="w-10 h-10 bg-blue-500 rounded-lg"></div>
             <h3 class="text-lg font-semibold text-gray-900 mt-4">簡単追加</h3>
             <p class="text-sm text-gray-600 mt-2">ワンクリックでタスクを作成でき、面倒な入力は要りません。</p>
           </div>
 
-          <!-- カード2 -->
           <div class="bg-white rounded-xl shadow-md p-6">
             <div class="w-10 h-10 bg-green-500 rounded-lg"></div>
             <h3 class="text-lg font-semibold text-gray-900 mt-4">チーム共有</h3>
             <p class="text-sm text-gray-600 mt-2">メンバー間で進捗をリアルタイムに見える化します。</p>
           </div>
 
-          <!-- カード3 -->
           <div class="bg-white rounded-xl shadow-md p-6">
             <div class="w-10 h-10 bg-amber-500 rounded-lg"></div>
             <h3 class="text-lg font-semibold text-gray-900 mt-4">通知連携</h3>
@@ -52,7 +63,109 @@
         </div>
       </div>
     </section>
+
+    <!-- 料金プラン: 第7章の料金カードと同じ形。Proだけ反転+バッジ+少し大きく -->
+    <section id="pricing" class="py-12 md:py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900">料金プラン</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          <!-- Free -->
+          <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col">
+            <h3 class="text-lg font-semibold text-gray-700">Free</h3>
+            <div class="mt-3 mb-5">
+              <span class="text-4xl font-bold text-gray-900">¥0</span>
+              <span class="text-sm text-gray-500">/月</span>
+            </div>
+            <!-- grow: 余ったスペースを引き受けて、ボタンを下にそろえる -->
+            <ul class="text-sm text-gray-600 space-y-2 mb-6 grow">
+              <li>✓ プロジェクト 3 個まで</li>
+              <li>✓ 基本サポート</li>
+              <li>✓ 1GB ストレージ</li>
+            </ul>
+            <button
+              class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 rounded-md">無料で始める</button>
+          </div>
+
+          <!-- Pro: relative でバッジの位置の基準にする -->
+          <div class="bg-blue-600 text-white rounded-xl shadow-xl p-6 flex flex-col relative md:scale-105">
+            <span
+              class="absolute top-3 right-3 text-xs font-semibold bg-amber-400 text-amber-900 px-2 py-1 rounded-full">人気</span>
+            <h3 class="text-lg font-semibold text-blue-100">Pro</h3>
+            <div class="mt-3 mb-5">
+              <span class="text-4xl font-bold">¥1,980</span>
+              <span class="text-sm text-blue-200">/月</span>
+            </div>
+            <ul class="text-sm text-blue-50 space-y-2 mb-6 grow">
+              <li>✓ プロジェクト無制限</li>
+              <li>✓ 優先サポート</li>
+              <li>✓ 100GB ストレージ</li>
+              <li>✓ チーム共有機能</li>
+            </ul>
+            <button class="w-full bg-white hover:bg-blue-50 text-blue-700 font-semibold py-3 rounded-md">Pro
+              を試す</button>
+          </div>
+
+          <!-- Enterprise -->
+          <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col">
+            <h3 class="text-lg font-semibold text-gray-700">Enterprise</h3>
+            <div class="mt-3 mb-5">
+              <span class="text-4xl font-bold text-gray-900">お問合せ</span>
+            </div>
+            <ul class="text-sm text-gray-600 space-y-2 mb-6 grow">
+              <li>✓ Pro の全機能</li>
+              <li>✓ 専任サポート</li>
+              <li>✓ 無制限ストレージ</li>
+              <li>✓ SSO / 監査ログ</li>
+            </ul>
+            <button
+              class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 rounded-md">相談する</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ: 幅を絞って中央に。details で開け閉め(JavaScriptなし) -->
+    <section id="faq" class="py-12 md:py-16 px-6">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900">よくある質問</h2>
+
+        <div class="mt-10 space-y-4">
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer">無料プランで何ができますか?</summary>
+            <p class="mt-3 text-gray-600">プロジェクト 3 個まで、基本サポート付きでご利用いただけます。</p>
+          </details>
+
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer">退会はいつでもできますか?</summary>
+            <p class="mt-3 text-gray-600">はい、いつでも退会可能で、解約料はかかりません。</p>
+          </details>
+
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer">チームの上限はありますか?</summary>
+            <p class="mt-3 text-gray-600">Free プランは 3 名まで、Pro プランは無制限です。</p>
+          </details>
+
+          <details class="bg-white rounded-lg shadow-sm p-5">
+            <summary class="font-semibold text-gray-900 cursor-pointer">データのエクスポートはできますか?</summary>
+            <p class="mt-3 text-gray-600">CSV と JSON 形式でいつでもエクスポートできます。</p>
+          </details>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- フッター: スマホは縦積み、md以上で横並び -->
+  <footer class="bg-gray-800 text-gray-300">
+    <div class="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm">© 2026 Tabita</p>
+      <div class="flex gap-6 text-sm">
+        <a href="#" class="hover:text-white">プライバシー</a>
+        <a href="#" class="hover:text-white">利用規約</a>
+        <a href="#" class="hover:text-white">会社情報</a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

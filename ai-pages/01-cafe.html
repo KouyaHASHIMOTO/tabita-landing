@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>こもれび珈琲 | 森の中の小さなカフェ</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-stone-50 text-stone-800">
+  <!-- ヘッダー: スマホではメニューを隠す -->
+  <header class="bg-white border-b border-stone-200">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-amber-800">こもれび珈琲</a>
+      <nav class="hidden md:flex gap-8 text-stone-600">
+        <a href="#concept" class="hover:text-amber-800">こだわり</a>
+        <a href="#menu" class="hover:text-amber-800">メニュー</a>
+        <a href="#access" class="hover:text-amber-800">アクセス</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーロー -->
+    <section class="bg-amber-50 py-20 md:py-28 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-sm font-semibold text-amber-700 tracking-widest">SINCE 2019</p>
+        <h1 class="mt-3 text-3xl md:text-5xl font-bold text-stone-900">木もれ日の下で、ゆっくり一杯。</h1>
+        <p class="mt-4 text-stone-600">自家焙煎の珈琲と手づくりの焼き菓子。森のそばの小さなカフェです。</p>
+        <a href="#access" class="inline-block mt-8 px-6 py-3 bg-amber-700 text-white font-semibold rounded-md hover:bg-amber-800">お店の場所を見る</a>
+      </div>
+    </section>
+
+    <!-- こだわり: 3カード -->
+    <section id="concept" class="py-12 md:py-16 px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-stone-900">3つのこだわり</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <p class="text-3xl">☕</p>
+            <h3 class="mt-4 text-lg font-semibold text-stone-900">毎朝の自家焙煎</h3>
+            <p class="mt-2 text-sm text-stone-600">その日の分だけを店内で焙煎。香りが一番いい状態でお出しします。</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <p class="text-3xl">🍰</p>
+            <h3 class="mt-4 text-lg font-semibold text-stone-900">手づくりの焼き菓子</h3>
+            <p class="mt-2 text-sm text-stone-600">季節の果物を使ったケーキやスコーンを、毎日少しずつ焼いています。</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-6">
+            <p class="text-3xl">🌳</p>
+            <h3 class="mt-4 text-lg font-semibold text-stone-900">森が見える窓辺</h3>
+            <p class="mt-2 text-sm text-stone-600">大きな窓から木々が見える席。読書や作業にもどうぞ。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- メニュー抜粋 -->
+    <section id="menu" class="bg-white py-12 md:py-16 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-stone-900">人気のメニュー</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 mt-10">
+          <div class="flex justify-between border-b border-dotted border-stone-300 pb-2">
+            <span>こもれびブレンド</span><span class="font-semibold">¥550</span>
+          </div>
+          <div class="flex justify-between border-b border-dotted border-stone-300 pb-2">
+            <span>カフェラテ</span><span class="font-semibold">¥600</span>
+          </div>
+          <div class="flex justify-between border-b border-dotted border-stone-300 pb-2">
+            <span>季節のフルーツタルト</span><span class="font-semibold">¥650</span>
+          </div>
+          <div class="flex justify-between border-b border-dotted border-stone-300 pb-2">
+            <span>プレーンスコーン</span><span class="font-semibold">¥380</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section id="access" class="py-12 md:py-16 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-stone-900">営業時間とアクセス</h2>
+        <dl class="mt-10 bg-white rounded-xl shadow-md p-6 grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-6">
+          <dt class="font-semibold text-stone-900">営業時間</dt>
+          <dd class="md:col-span-2 text-stone-600">10:00〜18:00(火曜定休)</dd>
+          <dt class="font-semibold text-stone-900">住所</dt>
+          <dd class="md:col-span-2 text-stone-600">〇〇県〇〇市もりの台 1-2-3</dd>
+          <dt class="font-semibold text-stone-900">アクセス</dt>
+          <dd class="md:col-span-2 text-stone-600">〇〇駅から徒歩8分。駐車場4台あり</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-stone-800 text-stone-300">
+    <div class="max-w-5xl mx-auto px-6 py-8 text-center text-sm">© 2026 こもれび珈琲</div>
+  </footer>
+</body>
+
+</html>
